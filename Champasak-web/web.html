@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Champasak Province Website</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Saysettha OT', 'Phetsarath OT', sans-serif;
+            background-color: #333; /* สีสำรองกรณีรูปไม่ขึ้น */
+        }
+
+        /* ส่วนพื้นหลังหลัก */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* เปลี่ยน URL รูปได้ที่นี่ */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* แถบเมนูด้านบน */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 60px;
+        }
+
+        /* โลโก้ที่มีเส้นประตามรูป */
+        .logo {
+            border: 4px dashed rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* รายการเมนู */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-left: 2px;
+            font-size: 14px;
+        }
+
+        /* ปุ่มสีขาวที่ถูกเลือก (หน้าหลัก) */
+        nav ul li a.active {
+            background-color: white;
+            color: black;
+        }
+
+        /* ข้อความตรงกลางหน้าจอ */
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 80px;
+            margin-bottom: 30px;
+            font-weight: normal;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* ปุ่มด้านล่าง */
+        .btn-group .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            border: 1px solid white;
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-section">
+        <header>
+            <div class="logo">
+                CHAMPASAK WEBSITE
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">ໜ້າຫຼັກ</a></li>
+                    <li><a href="#">ສະຖານທີ່ທ່ອງທ່ຽວ</a></li>
+                    <li><a href="#">ຕິດຕໍ່</a></li>
+                    <li><a href="#">ກ່ຽວກັບຈຳປາສັກ</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="content">
+            <h1>Champasak Province</h1>
+            
+            <div class="btn-group">
+                <a href="#" class="btn">Watch Video</a>
+                <a href="#" class="btn">Learn more</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

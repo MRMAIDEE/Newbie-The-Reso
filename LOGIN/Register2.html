@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body style="margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center; background-color: aqua;">
+
+<div style="width: 300px; padding: 30px; background-color:white ; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); text-align: center;">
+    <h2>Register</h2>
+
+    <input type="text" id="Gmail" placeholder="Gmail" style="width: 100%; padding: 8px; margin: 10px 0; box-sizing: border-box;">
+    
+    <input type="password" id="Password" placeholder="Password" style="width: 100%; padding: 8px; margin: 10px 0; box-sizing: border-box;">
+    
+    <input type="password" id="ConfirmPassword" placeholder="Confirm Password" style="width: 100%; padding: 8px; margin: 10px 0; box-sizing: border-box;">
+    
+    <button onclick="Register()" style="width: 50%; padding: 8px; background-color: black; cursor: pointer; color: white; border-radius: 20px; margin-top: 10px; border: none;">
+        Register
+    </button>
+    
+    <p id="message" style="font-size: 14px; color: green; margin-top: 15px; font-weight: bold;"></p>
+</div>
+    
+<script>
+    function Register() {
+        // 1. ดึงค่าจาก input ทั้ง 3 ช่อง
+        var email = document.getElementById("Gmail").value;
+        var pass = document.getElementById("Password").value;
+        var confirmPass = document.getElementById("ConfirmPassword").value;
+        var msg = document.getElementById("message");
+
+        // 2. ตรวจสอบเงื่อนไข
+        if (email === "" || pass === "" || confirmPass === "") {
+            // ถ้ากรอกไม่ครบ
+            msg.style.color = "red";
+            msg.innerText = "กรุณากรอกข้อมูลให้ครบทุกช่อง";
+        } 
+        else if (pass !== confirmPass) {
+            // ถ้ารหัสผ่านไม่ตรงกัน (!== คือ ไม่เท่ากับ)
+            msg.style.color = "red";
+            msg.innerText = "รหัสผ่านไม่ตรงกัน!";
+        } 
+        else {
+            // ถ้าทุกอย่างถูกต้อง
+            msg.style.color = "green";
+            msg.innerText = "สมัครเรียบร้อยแล้ว ✅";
+            
+            // (เพิ่มเติม) ถ้าอยากให้สมัครเสร็จแล้วเด้งไปหน้า Login หลังจากผ่านไป 2 วินาที
+            // setTimeout(function(){ window.location.href = "login.html"; }, 2000);
+        }
+    }
+</script>
+
+</body>
+</html>

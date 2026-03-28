@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Layout</title>
+    <style>
+        /* 1. สั่งให้ Body สูงเต็มจอและจัดของข้างในให้อยู่กลาง */
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center; /* กลางแนวนอน */
+            align-items: center;     /* กลางแนวตั้ง */
+            min-height: 100vh;      /* สูงเท่าหน้าจอ */
+            background-color: #f0f0f0;
+        }
+
+        /* 2. Main-box เป็นตัวคลุม (Container) */
+        .Main-box {
+            width: 500px;
+            height: 350px;
+            border: 2px solid #45d;
+            position: relative; /* เปลี่ยนจาก absolute เป็น relative เพื่อให้ลูกๆ ยึดตามกล่องนี้ */
+            background-color: white;
+        }
+
+        /* 3. ตกแต่งวงกลม */
+        .col-box-1, .col-box-2, .col-box-3, .col-box-4, .centers {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: blue;
+            position: absolute; /* ลูกๆ ยังเป็น absolute เพื่อจัดวางตำแหน่งในกล่องแม่ */
+        }
+
+        /* 4. ปรับตำแหน่งลูกๆ ให้อยู่ในขอบเขตของ Main-box */
+        .col-box-1 { top: -50px; left: -50px; } /* มุมซ้ายบน */
+        .col-box-2 { bottom: -50px; left: -50px; } /* มุมซ้ายล่าง */
+        .col-box-3 { top: -50px; right: -50px; } /* มุมขวาบน */
+        .col-box-4 { bottom: -50px; right: -50px; } /* มุมขวาล่าง */
+        
+        .centers { 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); /* กลางเป๊ะของกล่องแม่ */
+        }
+    </style>
+</head>
+<body>
+    <div class="Main-box">
+        <div class="col-box-1"></div>
+        <div class="col-box-2"></div>
+        <div class="col-box-3"></div>
+        <div class="col-box-4"></div>
+        <div class="centers"></div>
+    </div>
+</body>
+</html>

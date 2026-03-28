@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body style="
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+">
+<div style="
+    width: 300px;
+    padding: 30px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+">
+    <h2>login</h2>
+
+    <input type="text" id="Username" placeholder="Username"
+    style="
+    width: 100%; padding: 8px; margin: 10px 0; box-sizing: border-box;
+    ">
+    <input type="password" id="Password" placeholder="Password"
+    style="
+    width: 100%; padding: 8px; margin: 10px 0; box-sizing: border-box;
+    ">
+
+    <button onclick="login()" style="
+        width: 50%;
+        padding: 8px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        margin-top: 20px;
+        cursor: pointer;
+
+    ">
+    Login
+    </button>
+    
+    <p id="message" style="color: red; font-size: 14px; margin-top: 15px;"></p>
+
+
+</div>
+
+    <script>
+        function login() {
+            var user = document.getElementById("Username").value;
+
+            var pass = document.getElementById("Username").value;
+
+            if(user === "admin" && pass === "1234"){
+                window.location.href("home.html");
+            } else {
+                document.getElementById("message").innerText = "Username ຫຼື Password ບໍ່ຖືກຕ້ອງ"
+            }
+            
+        }
+    </script>
+
+</body>
+</html>

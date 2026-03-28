@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'phetsarath ot',sans-serif;
+}
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(HT.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+}
+.logo-text {
+    border: 10px dashed;
+    padding: 5px;
+}
+li a {
+    border: 2px solid;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 5px;
+}
+li a:hover {
+    background-color: white;
+    color: black;
+}
+ul  {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+.main-box {
+    display: flex;
+    height: 100vh;
+}
+
+.box-1 {
+    width: 50%;
+}
+
+.box-2 {
+    width: 50%;
+}
+.section-1 {
+    color: green;
+    margin: 10px;
+}
+.text__1 {
+    color: rgb(255, 255, 255);
+    margin: 10px;
+}
+.section-2 {
+    color: aqua;
+    margin: 10px;
+}
+.text {
+    color: white;
+    margin: 10px;
+}
+.section-3 {
+    color: aqua;
+    margin: 10px;
+}
+.text__3 {
+    color: white;
+    margin: 10px;
+}
+.section-4 {
+    color: green;
+    margin: 10px;
+}
+.text__4 {
+    color: white;
+    margin: 10px;
+}
+.section-5 {
+    color: aqua;
+    margin: 10px;
+}
+.text__5 {
+    color: white;
+    margin: 10px;
+}
+.img {
+    overflow: hidden;
+    border-radius: 8px;
+    height: 100%;
+    border: 2px
+}
+a img {
+    margin: 10px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}

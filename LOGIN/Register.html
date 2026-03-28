@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body style="
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+
+">
+<div style="
+    width: 300px;
+    padding: 30px;
+    background-color:white ;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    
+    
+
+">
+<h2>Register</h2>
+
+<input type="text" id="Gmail" placeholder="Gmail" style="
+    width: 100%; padding: 8px; margin: 10px 0; box-sizing: border-box;
+    
+
+">
+<input type="text" id="Password" placeholder="Password" style="
+    width: 100%; padding: 8px; margin: 10px 0; box-sizing: border-box;
+    
+
+">
+<input type="text" id="ConfirmPassword" placeholder="Confirm Password" style="
+    width: 100%; padding: 8px; margin: 10px 0; box-sizing: border-box;
+    
+
+">
+<button onclick="Registers()" style="
+    width: 50%;
+    padding: 8px;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border-radius: 20px;
+    margin-top: 10px;
+
+
+">Register
+</button>
+<p id="message" style=" font-size: 14px; color: greenyellow; margin-top: 15px;"></p>
+
+</div>
+    
+   <script>
+        function Register() {
+            var email = document.getElementById("Gmail").value;
+
+            var pass = document.getElementById("Password").value;
+            
+            var confirmpass = document.getElementById("ConfirmPassword").value;
+
+            var msg = document.getElementById("message");
+
+            if(email === "" || pass === "" || confirmpass === "") {
+                msg.style.color = "red";
+                msg.innerText = "ກອກຂໍ້ມູນກ່ອນໄອສາດດດ";
+            }
+            else if(pass !== confirmpass){
+                msg.style.color = "red";
+                msg.innerText = "ລະຫັດບໍ່ຕົງກັນໄວເວດດ";
+                
+            }
+            else {
+                msg.style.color = "green";
+                msg.innerText = "ສະຫມັກແລ້ວຈ່ະຄົນດີ";
+
+            }
+        }
+    </script>
+
+</body>
+</html>
