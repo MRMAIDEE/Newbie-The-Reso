@@ -51,24 +51,21 @@ li a:hover {
     padding: 50px;
     gap: 20px;
     
-
-    
-
 }
 .Box-content {
-    border: 1px solid white;
+    border: 1px soli white;
     padding: 10px;
     margin: 10px;
     width: 410px;
 }
-.Name {
+.name {
     display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-    border: 1px solid white;
-    
-}
+    width: 100%;
 
+}
+.name input {
+    width: 100%;
+}
 .Account {
     display: flex;
     flex-direction: column;
@@ -82,9 +79,6 @@ li a:hover {
     height: 360px;
     
 }
-
-
-
 
 textarea {
     width: 100%;
@@ -115,6 +109,8 @@ textarea {
     font-family: 'Dancing script',cursive;
     margin-bottom: 20px;
     font-style: italic;
+
+    
 }
 
 .Textaex button {
@@ -125,3 +121,24 @@ textarea {
     cursor: pointer;
 }
 
+.Map-content button {
+    margin: 10px;
+    cursor: pointer;
+}
+.Map-content button:hover {
+    background-color: rgb(43, 255, 0);
+    color: black;
+}
+.Hotel-name p {
+    font-family: 'lora',sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+.Phonenumber p {
+    font-family: 'lora'sans-serif;
+    font-size: 18px;
+    color: #ccc;
+    border-top: 1px solid white;
+    padding-top: 5px;
+}
